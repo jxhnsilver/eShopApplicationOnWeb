@@ -17,10 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\eShopApplicationOnWeb.Application\eShopApplicationOnWeb.Application.csproj" />
     <ProjectReference Include="..\eShopApplicationOnWeb.Infrastructure\eShopApplicationOnWeb.Infrastructure.csproj" />
     <ProjectReference Include="..\eShopApplicationOnWeb.Persistence\eShopApplicationOnWeb.Persistence.csproj" />
