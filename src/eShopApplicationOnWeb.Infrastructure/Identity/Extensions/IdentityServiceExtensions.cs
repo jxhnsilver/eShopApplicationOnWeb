@@ -1,5 +1,7 @@
-﻿using eShopApplicationOnWeb.Infrastructure.Identity.Persistence.Context;
+﻿using eShopApplicationOnWeb.Application.Contracts.Identity.Services.Auth;
+using eShopApplicationOnWeb.Infrastructure.Identity.Persistence.Context;
 using eShopApplicationOnWeb.Infrastructure.Identity.Persistence.Models;
+using eShopApplicationOnWeb.Infrastructure.Identity.Services.Auth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -26,6 +28,8 @@ namespace eShopApplicationOnWeb.Infrastructure.Identity.Extensions
             })
             .AddEntityFrameworkStores<ApplicationIdentityDbContext>()
             .AddDefaultTokenProviders();
+
+            services.AddScoped<IAuthService, AuthService>();
 
             return services;
         }
