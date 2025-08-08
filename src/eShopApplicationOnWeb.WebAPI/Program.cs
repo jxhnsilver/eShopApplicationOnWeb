@@ -1,4 +1,4 @@
-using eShopApplicationOnWeb.Infrastructure.Identity.Extensions;
+using eShopApplicationOnWeb.Infrastructure.Extensions;
 
 namespace eShopApplicationOnWeb.WebAPI
 {
@@ -10,7 +10,7 @@ namespace eShopApplicationOnWeb.WebAPI
 
             // Add services to the container.
             builder.Services.
-                AddIdentityServices(builder.Configuration);
+                AddInfrastructureServices(builder.Configuration);
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
