@@ -1,5 +1,5 @@
-﻿using eShopApplicationOnWeb.Infrastructure.Identity.Persistence.Configurations;
-using eShopApplicationOnWeb.Infrastructure.Identity.Persistence.Models;
+﻿using eShopApplicationOnWeb.Infrastructure.Identity.Models;
+using eShopApplicationOnWeb.Infrastructure.Identity.Persistence.Configurations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
