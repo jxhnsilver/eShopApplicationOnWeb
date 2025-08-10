@@ -9,6 +9,6 @@ namespace eShopApplicationOnWeb.Infrastructure.Identity.Exceptions
         public override int StatusCode => StatusCodes.Status422UnprocessableEntity;
         public override string ErrorType => "identity_operation_failed";
         public IdentityOperationFailedException(IEnumerable<IdentityError> errors) 
-            : base($"Identity error: {string.Join(", ", errors.Select(e => e.Description))}") { }
+            : base($"Identity operation failed: {string.Join(", ", errors.Select(e => e.Description))}") { }
     }
 }

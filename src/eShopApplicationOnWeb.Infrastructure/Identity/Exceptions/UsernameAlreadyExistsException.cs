@@ -8,6 +8,6 @@ namespace eShopApplicationOnWeb.Infrastructure.Identity.Exceptions
         public override int StatusCode => StatusCodes.Status409Conflict;
         public override string ErrorType => "username_already_exists";
         public UsernameAlreadyExistsException(string username)
-            : base($"Username '{username}' is already taken") { }
+            : base($"Username '{username}' is already exists") { }
     }
 }
