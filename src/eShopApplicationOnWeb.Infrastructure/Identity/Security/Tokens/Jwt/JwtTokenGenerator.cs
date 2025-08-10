@@ -22,9 +22,9 @@ namespace eShopApplicationOnWeb.Infrastructure.Identity.Security.Tokens.Jwt
 
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, applicationUser.Id),
-                new Claim(JwtRegisteredClaimNames.Email, applicationUser.Email!),
-                new Claim(JwtRegisteredClaimNames.UniqueName, applicationUser.UserName!),
+                new Claim(ClaimTypes.NameIdentifier, applicationUser.Id),
+                new Claim(ClaimTypes.Email, applicationUser.Email!),
+                new Claim(ClaimTypes.Name, applicationUser.UserName!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 

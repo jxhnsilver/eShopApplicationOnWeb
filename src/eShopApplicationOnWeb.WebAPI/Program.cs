@@ -1,5 +1,9 @@
 using eShopApplicationOnWeb.Infrastructure.Extensions;
+<<<<<<< HEAD
+using eShopApplicationOnWeb.WebAPI.Extensions;
+=======
 using eShopApplicationOnWeb.WebAPI.Extensions.Middleware;
+>>>>>>> 9d33c8485c99f9bb57ad00151ff12002bfeef34a
 
 namespace eShopApplicationOnWeb.WebAPI
 {
@@ -10,8 +14,10 @@ namespace eShopApplicationOnWeb.WebAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.
-                AddInfrastructureServices(builder.Configuration);
+            builder.Services
+                .AddWebApiServices()
+                .AddInfrastructureServices(builder.Configuration);
+         
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

@@ -1,4 +1,4 @@
-﻿namespace eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Login
+﻿namespace eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Auth.Login
 {
     public class LoginResponse
     {
