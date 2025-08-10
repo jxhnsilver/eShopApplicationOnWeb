@@ -32,8 +32,7 @@ namespace eShopApplicationOnWeb.Infrastructure.Identity.Extensions
                 options.User.RequireUniqueEmail = true;
                 options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
             })
-            .AddEntityFrameworkStores<ApplicationIdentityDbContext>()
-            .AddDefaultTokenProviders();
+            .AddEntityFrameworkStores<ApplicationIdentityDbContext>();
 
             services.AddScoped<IAuthService, AuthService>();
 
