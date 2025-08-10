@@ -1,4 +1,5 @@
-﻿using eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Register;
+﻿using eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Login;
+using eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Register;
 using eShopApplicationOnWeb.Application.Contracts.Identity.Services.Auth;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,14 @@ namespace eShopApplicationOnWeb.WebAPI.Controllers
             var result = await _authService.RegisterAsync(request);
 
             return StatusCode(StatusCodes.Status201Created, result);
+        }
+        [Route("login")]
+        [HttpPost]
+        public async Task<IActionResult> LoginAsync(LoginRequest request)
+        {
+            var result = await _authService.LoginAsync(request);
+
+            return Ok(result);
         }
     }
 }
