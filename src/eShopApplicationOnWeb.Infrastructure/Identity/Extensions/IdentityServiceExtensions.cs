@@ -1,9 +1,11 @@
-﻿using eShopApplicationOnWeb.Application.Contracts.Identity.Services.Auth;
+﻿using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Services.Auth;
+using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Services.CurrentUser;
 using eShopApplicationOnWeb.Infrastructure.Identity.Models;
 using eShopApplicationOnWeb.Infrastructure.Identity.Persistence.Context;
 using eShopApplicationOnWeb.Infrastructure.Identity.Security.Settings;
 using eShopApplicationOnWeb.Infrastructure.Identity.Security.Tokens.Jwt;
 using eShopApplicationOnWeb.Infrastructure.Identity.Services.Auth;
+using eShopApplicationOnWeb.Infrastructure.Services.CurrentUser;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -40,6 +42,8 @@ namespace eShopApplicationOnWeb.Infrastructure.Identity.Extensions
 
             AddJwtAuthentication(services, configuration);
             services.AddAuthorization();
+
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
 
             return services;
         }
