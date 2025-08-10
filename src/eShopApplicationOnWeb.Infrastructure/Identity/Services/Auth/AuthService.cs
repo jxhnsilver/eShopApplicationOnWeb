@@ -1,6 +1,6 @@
-﻿using eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Login;
-using eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Register;
-using eShopApplicationOnWeb.Application.Contracts.Identity.Services.Auth;
+﻿using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Auth.Login;
+using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Auth.Register;
+using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Services.Auth;
 using eShopApplicationOnWeb.Infrastructure.Identity.Exceptions;
 using eShopApplicationOnWeb.Infrastructure.Identity.Models;
 using eShopApplicationOnWeb.Infrastructure.Identity.Security.Tokens.Jwt;
