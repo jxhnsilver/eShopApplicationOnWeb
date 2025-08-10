@@ -1,4 +1,5 @@
 using eShopApplicationOnWeb.Infrastructure.Extensions;
+using eShopApplicationOnWeb.WebAPI.Extensions.Middleware;
 
 namespace eShopApplicationOnWeb.WebAPI
 {
@@ -17,6 +18,8 @@ namespace eShopApplicationOnWeb.WebAPI
             builder.Services.AddOpenApi();
 
             var app = builder.Build();
+
+            app.UseGlobalExceptionHandler();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
