@@ -1,12 +1,11 @@
 ﻿using eShopApplicationOnWeb.Infrastructure.Identity.Models;
-using eShopApplicationOnWeb.Infrastructure.Identity.Security.Settings;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace eShopApplicationOnWeb.Infrastructure.Identity.Security.Tokens.Jwt
+namespace eShopApplicationOnWeb.Infrastructure.Identity.Security.Jwt
 {
     public class JwtTokenGenerator : IJwtTokenGenerator
     {
@@ -22,9 +21,9 @@ namespace eShopApplicationOnWeb.Infrastructure.Identity.Security.Tokens.Jwt
 
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, applicationUser.Id),
-                new Claim(JwtRegisteredClaimNames.Email, applicationUser.Email!),
-                new Claim(JwtRegisteredClaimNames.UniqueName, applicationUser.UserName!),
+                new Claim(ClaimTypes.NameIdentifier, applicationUser.Id),
+                new Claim(ClaimTypes.Email, applicationUser.Email!),
+                new Claim(ClaimTypes.Name, applicationUser.UserName!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 

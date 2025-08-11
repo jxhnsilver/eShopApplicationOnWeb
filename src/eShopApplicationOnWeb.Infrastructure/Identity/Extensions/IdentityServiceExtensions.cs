@@ -1,9 +1,8 @@
-﻿using eShopApplicationOnWeb.Application.Contracts.Identity.Services.Auth;
+﻿using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Services;
 using eShopApplicationOnWeb.Infrastructure.Identity.Models;
 using eShopApplicationOnWeb.Infrastructure.Identity.Persistence.Context;
-using eShopApplicationOnWeb.Infrastructure.Identity.Security.Settings;
-using eShopApplicationOnWeb.Infrastructure.Identity.Security.Tokens.Jwt;
-using eShopApplicationOnWeb.Infrastructure.Identity.Services.Auth;
+using eShopApplicationOnWeb.Infrastructure.Identity.Security.Jwt;
+using eShopApplicationOnWeb.Infrastructure.Identity.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -30,8 +29,7 @@ namespace eShopApplicationOnWeb.Infrastructure.Identity.Extensions
                 options.User.RequireUniqueEmail = true;
                 options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
             })
-            .AddEntityFrameworkStores<ApplicationIdentityDbContext>()
-            .AddDefaultTokenProviders();
+            .AddEntityFrameworkStores<ApplicationIdentityDbContext>();
 
             services.AddScoped<IAuthService, AuthService>();
 

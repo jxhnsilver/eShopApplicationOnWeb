@@ -1,6 +1,6 @@
-﻿using eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Login;
-using eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Register;
-using eShopApplicationOnWeb.Application.Contracts.Identity.Services.Auth;
+﻿using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Login;
+using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Register;
+using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eShopApplicationOnWeb.WebAPI.Controllers

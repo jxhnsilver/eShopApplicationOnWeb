@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace eShopApplicationOnWeb.Application.Contracts.Identity.Dtos.Auth.Register
+namespace eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Register
 {
     public class RegisterRequest
     {

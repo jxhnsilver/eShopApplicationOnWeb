@@ -1,6 +1,6 @@
 ﻿using eShopApplicationOnWeb.Infrastructure.Identity.Models;
 
-namespace eShopApplicationOnWeb.Infrastructure.Identity.Security.Tokens.Jwt
+namespace eShopApplicationOnWeb.Infrastructure.Identity.Security.Jwt
 {
     public interface IJwtTokenGenerator
     {
