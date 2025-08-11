@@ -14,7 +14,6 @@ namespace eShopApplicationOnWeb.WebAPI
             builder.Services
                 .AddWebApiServices()
                 .AddInfrastructureServices(builder.Configuration);
-         
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

@@ -1,4 +1,4 @@
-﻿namespace eShopApplicationOnWeb.Infrastructure.Identity.Security.Settings
+﻿namespace eShopApplicationOnWeb.Infrastructure.Identity.Security.Jwt
 {
     public class JwtSettings
     {

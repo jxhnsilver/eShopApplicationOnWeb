@@ -1,12 +1,12 @@
-﻿using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Auth.Login;
-using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Auth.Register;
-using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Services.Auth;
+﻿using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Login;
+using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Dtos.Register;
+using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Identity.Services;
 using eShopApplicationOnWeb.Infrastructure.Identity.Exceptions;
 using eShopApplicationOnWeb.Infrastructure.Identity.Models;
-using eShopApplicationOnWeb.Infrastructure.Identity.Security.Tokens.Jwt;
+using eShopApplicationOnWeb.Infrastructure.Identity.Security.Jwt;
 using Microsoft.AspNetCore.Identity;
 
-namespace eShopApplicationOnWeb.Infrastructure.Identity.Services.Auth
+namespace eShopApplicationOnWeb.Infrastructure.Identity.Services
 {
     public class AuthService : IAuthService
     {

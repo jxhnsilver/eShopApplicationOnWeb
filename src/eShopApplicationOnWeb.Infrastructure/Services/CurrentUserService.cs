@@ -1,8 +1,8 @@
-﻿using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Services.CurrentUser;
+﻿using eShopApplicationOnWeb.Application.Contracts.Infrastructure.Services;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-namespace eShopApplicationOnWeb.Infrastructure.Services.CurrentUser
+namespace eShopApplicationOnWeb.Infrastructure.Services
 {
     public class CurrentUserService : ICurrentUserService
     {
