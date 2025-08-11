@@ -1,9 +1,6 @@
 using eShopApplicationOnWeb.Infrastructure.Extensions;
-<<<<<<< HEAD
 using eShopApplicationOnWeb.WebAPI.Extensions;
-=======
 using eShopApplicationOnWeb.WebAPI.Extensions.Middleware;
->>>>>>> 9d33c8485c99f9bb57ad00151ff12002bfeef34a
 
 namespace eShopApplicationOnWeb.WebAPI
 {
